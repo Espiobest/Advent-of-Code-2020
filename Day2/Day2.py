@@ -1,16 +1,16 @@
 r = open('data.txt')
-c = r.read().strip().split('\n')
-x=0
-y=0
-for i in c:
-    s=i.split()
-    a,b=s[0].split('-')
-    a,b=map(int,(a,b))
+inp = r.read().strip().split('\n')
+x = 0
+y = 0
+for i in inp:
+    line = i.split()
+    start, end = line[0].split('-')
+    start, end = map(int,(start, end))
 
-    if a <= s[2].count(s[1][0]) <= b: x += 1 #part 1
+    if start <= line[2].count(line[1][0]) <= end: x += 1 #part 1
 
-    if s[2][a-1] == s[1][0] and s[2][b-1] != s[1][0]: y += 1 # part 2
-    elif s[2][a-1] != s[1][0] and s[2][b-1] == s[1][0]: y += 1
+    if line[2][start-1] == line[1][0] and line[2][end-1] != line[1][0]: y += 1 # part 2
+    elif line[2][start-1] != line[1][0] and line[2][end-1] == line[1][0]: y += 1
 
 print(x)
 print(y)
