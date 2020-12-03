@@ -1,7 +1,7 @@
-z = open('data.txt')
-F = z.read().strip().split()
+with open('data.txt','r') as r:
+    F = r.read().strip().split()
+   
 lst = [[1,1], [3,1], [5,1], [7,1], [1,2]]
-fg = []
 k = 1
 for a,b in lst:
     z = c = s = 0
