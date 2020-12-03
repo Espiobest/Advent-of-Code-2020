@@ -1,8 +1,8 @@
 from itertools import permutations
 
 
-r = open('data.txt')
-c = r.read().strip().split()
+with open('data.txt','r') as r:
+  c = r.read().strip().split()
 
 numbers = [*map(int,c)]
 target_number = 2020
