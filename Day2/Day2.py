@@ -1,5 +1,5 @@
-r = open('data.txt')
-inp = r.read().strip().split('\n')
+with open('data.txt','r') as r:
+    inp = r.read().strip().split()
 x = 0
 y = 0
 for i in inp:
