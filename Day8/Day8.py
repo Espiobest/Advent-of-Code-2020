@@ -1,5 +1,5 @@
 with open('data.txt') as r:
-    inp = [l.rstrip('\n') for l in r.read().strip().split('\n')]
+    inp = [*r.read().split('\n')]
 
 acc = 0
 pc = 0
